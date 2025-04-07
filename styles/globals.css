@@ -1,5 +1,5 @@
 body {
-  background-color: #333333; /* Dark grey background */
+  background-color: #333333;
   margin: 0;
   padding: 20px;
   min-height: 100vh;
@@ -14,22 +14,19 @@ body {
   gap: 40px;
 }
 
-/* All boxes will have these base styles */
 .square {
   border: 2px solid black;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Contains scrollbar INSIDE border */
+  overflow: hidden;
 }
 
-/* Top & Bottom Boxes (light pink) */
 .top-square, .bottom-square {
   background-color: #FFB6C1;
   height: 200px;
 }
 
-/* Middle Boxes (medium-dark grey) */
 .middle-squares {
   display: flex;
   gap: 20px;
@@ -37,23 +34,34 @@ body {
 }
 
 .middle-square {
-  background-color: #555555; /* Darker than boxes 1/4, lighter than site bg */
+  background-color: #555555;
   flex: 1;
   min-height: 300px;
 }
 
-/* Scrollable content for ALL boxes */
 .content-title {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
-  flex-shrink: 0; /* Prevents title from shrinking */
+  flex-shrink: 0;
 }
 
 .content-body {
   flex: 1;
-  overflow-y: auto; /* Scrollable content */
+  overflow-y: auto;
   padding: 5px;
-  border-top: 1px solid rgba(0,0,0,0.2); /* Subtle divider */
-  scrollbar-width: thin; /* Cleaner scrollbar */
+  border-top: 1px solid rgba(0,0,0,0.2);
+  scrollbar-width: thin;
+}
+
+/* Custom scrollbar for better visibility */
+.content-body::-webkit-scrollbar {
+  width: 8px;
+}
+.content-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.content-body::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
