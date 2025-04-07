@@ -24,11 +24,11 @@ body {
   box-sizing: border-box;
 }
 
-/* Box 1 & 5 (light tan) */
+/* Box 1 & 5 (now half height of Box 6) */
 .top-square, .box-five {
   background-color: #f5e6d0;
   color: #4a3a29;
-  height: 200px;
+  height: 100px; /* Changed from 200px to 100px */
 }
 
 /* Box 2 & 3 (rich green) */
@@ -46,11 +46,11 @@ body {
   height: 200px;
 }
 
-/* Box 6 (deep brown) */
+/* Box 6 (now standard size) */
 .box-six {
   background-color: #6b4e3a;
   color: #f5e6d0;
-  min-height: 450px;
+  height: 200px; /* Changed from min-height: 450px to height: 200px */
 }
 
 .middle-squares {
