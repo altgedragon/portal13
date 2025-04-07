@@ -21,28 +21,29 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden; /* Contain everything within borders */
-  box-sizing: border-box; /* Include padding in height calculations */
+  box-sizing: border-box; /* Include padding in height */
 }
 
-/* Header/Footer Boxes (light pink) */
+/* Header/Footer Boxes (light pink) - ALREADY CORRECT */
 .top-square, .bottom-square {
   background-color: #FFB6C1;
   height: 200px; /* Fixed height */
 }
 
-/* Middle Boxes (medium grey) */
+/* Middle Boxes Container */
 .middle-squares {
   display: flex;
   gap: 20px;
 }
 
+/* Middle Boxes (medium grey) - NOW WITH FIXED HEIGHT */
 .middle-square {
   background-color: #555555;
-  width: 50%; /* Equal width for both middle boxes */
-  height: 300px; /* Fixed height (same as before) */
+  width: 50%; /* Equal width */
+  height: 300px; /* Fixed height (adjust as needed) */
 }
 
-/* Content styles */
+/* Shared content styles */
 .content-title {
   font-weight: bold;
   margin-bottom: 10px;
@@ -51,13 +52,13 @@ body {
 }
 
 .content-body {
-  flex: 1;
-  overflow-y: auto; /* Enable vertical scrolling */
+  flex: 1; /* Takes remaining space */
+  overflow-y: auto; /* Scroll when content overflows */
   padding: 5px;
   border-top: 1px solid rgba(0,0,0,0.2);
 }
 
-/* Custom scrollbar styling */
+/* Optional: Better scrollbar styling */
 .content-body::-webkit-scrollbar {
   width: 8px;
 }
