@@ -1,146 +1,34 @@
-body {
-  background-color: #333333;
-  margin: 0;
-  padding: 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
+/* Updated styles for larger Box 1 and Box 2 */
+.top-square {
+  background-color: #f5e6d0;
+  color: #4a3a29;
+  height: 400px; /* Doubled from 200px */
 }
 
-.container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+/* Make first middle-square (Sample 2) taller */
+.middle-squares .middle-square:first-child {
+  height: 600px; /* Doubled from 300px */
 }
 
-.square {
-  border: 2px solid black;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  box-sizing: border-box;
+/* New Box 7 style - matches Box 5/1/6 */
+.box-seven {
+  background-color: #f5e6d0; /* Light tan like Box 1/5 */
+  color: #4a3a29;
+  min-height: 450px; /* Same as Box 6 */
 }
 
-/* Box 1 & 5 (light tan) */
-.top-square, .box-five {
-  background-color: #f5e6d0; /* Slightly lighter tan for better readability */
-  color: #4a3a29; /* Darker text for better contrast */
-  height: 200px;
-}
-
-/* Box 2 & 3 (light caramel) */
-.middle-square {
-  background-color: #d9b38c; /* Light caramel */
-  color: #2a1a0a; /* Very dark brown text */
-  width: 50%;
-  height: 300px;
-}
-
-/* Box 4 (light red) */
-.bottom-square {
-  background-color: #ff9999; /* Light red */
-  color: #5c0000; /* Deep red text */
-  height: 200px;
-}
-
-/* Box 6 (green) */
-.box-six {
-  background-color: #99cc99; /* Light green */
-  color: #003300; /* Dark green text */
-  min-height: 450px;
-}
-
-.middle-squares {
-  display: flex;
-  gap: 20px;
-}
-
-.content-title {
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-  flex-shrink: 0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-/* Tan boxes (1 & 5) titles */
-.top-square .content-title,
-.box-five .content-title {
-  color: #5a4a3a; /* Dark tan */
-  font-size: 1.4em; /* Slightly larger */
-  font-family: 'Georgia', serif; /* More elegant font */
-}
-
-/* Caramel boxes (2 & 3) titles */
-.middle-square .content-title {
-  color: #3a2511;
+/* Box 7 title */
+.box-seven .content-title {
+  color: #5a4a3a;
   font-size: 1.4em;
-  font-family: 'Verdana', sans-serif; /* Clean sans-serif */
+  font-family: 'Georgia', serif;
 }
 
-/* Red box (4) title */
-.bottom-square .content-title {
-  color: #800000;
-  font-size: 1.4em;
-  font-family: 'Arial Black', sans-serif; /* Bold font */
-}
-
-/* Green box (6) title */
-.box-six .content-title {
-  color: #004d00; /* Dark green */
-  font-size: 1.4em;
-  font-family: 'Trebuchet MS', sans-serif; /* Friendly font */
-}
-
-.content-body {
-  flex: 1;
-  padding: 5px;
-  border-top: 1px solid rgba(0,0,0,0.2);
-  line-height: 1.5;
-}
-
-.top-square .content-body,
-.middle-square .content-body,
-.bottom-square .content-body {
-  overflow-y: auto;
-}
-
-.box-five .content-body,
-.box-six .content-body {
+/* Box 7 content */
+.box-seven .content-body {
   overflow: hidden;
   padding: 15px;
   font-size: 1.1em;
-}
-
-/* Font adjustments for content */
-.top-square .content-body,
-.box-five .content-body {
   font-family: 'Georgia', serif;
   color: #4a3a29;
-}
-
-.middle-square .content-body {
-  font-family: 'Verdana', sans-serif;
-  color: #2a1a0a;
-}
-
-.bottom-square .content-body {
-  font-family: 'Arial', sans-serif;
-  color: #5c0000;
-}
-
-.box-six .content-body {
-  font-family: 'Trebuchet MS', sans-serif;
-  color: #003300;
-}
-
-.content-body::-webkit-scrollbar {
-  width: 8px;
-}
-.content-body::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.3);
-  border-radius: 4px;
 }
