@@ -1,39 +1,46 @@
 export default function Home() {
-  // Text long enough to force scrolling in all boxes
-  const longText = `
-    [Your long content here...]
-    `.repeat(10); 
+  const longText = `[Long sample text...]`.repeat(10);
+  const shortText = `This is the short sample text for Box 5 that will be fully visible without scrolling. 
+                    It demonstrates content that fits within the box boundaries.`;
 
   return (
     <div className="container">
-      {/* Top Box (pink) */}
+      {/* Top Box */}
       <div className="square top-square">
         <div className="content-title">Sample Title 1</div>
-        <div className="content-body">
+        <div className="scroll-content">
           <p>{longText}</p>
         </div>
       </div>
       
-      {/* Middle Boxes (gray) */}
+      {/* Middle Boxes */}
       <div className="middle-squares">
         <div className="square middle-square">
           <div className="content-title">Sample 2</div>
-          <div className="content-body">
+          <div className="scroll-content">
             <p>{longText}</p>
           </div>
         </div>
         <div className="square middle-square">
           <div className="content-title">Sample 3</div>
-          <div className="content-body">
+          <div className="scroll-content">
             <p>{longText}</p>
           </div>
         </div>
       </div>
       
-      {/* Bottom Box (pink) */}
+      {/* New Box 5 */}
+      <div className="square box-five">
+        <div className="content-title">Sample 5</div>
+        <div className="full-content">
+          <p>{shortText}</p>
+        </div>
+      </div>
+      
+      {/* Bottom Box */}
       <div className="square bottom-square">
         <div className="content-title">Sample 4</div>
-        <div className="content-body">
+        <div className="scroll-content">
           <p>{longText}</p>
         </div>
       </div>
