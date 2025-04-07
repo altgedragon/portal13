@@ -13,7 +13,7 @@ export default function Home() {
     oxygen equipment of the same size. The public was amazed to view the quickness and dexterity of the juggler.
   `.repeat(5);
 
-  // Expanded text for boxes 5-7 to fill tripled size
+  // Expanded text for boxes 5-6 to fill tripled size
   const expandedText = `
     This is the non-scrolling content for the enlarged Boxes 5 and 6. 
     The container height has been tripled from its original size to provide more visible space.
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Box 6 (Dark Brown) */}
+      {/* Box 6 (Deep Brown) */}
       <div className="square box-six">
         <div className="content-title">Sample Box 6</div>
         <div className="content-body">
