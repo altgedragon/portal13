@@ -1,5 +1,4 @@
 export default function Home() {
-  // Long text for boxes 1-4
   const longText = `
     The quick brown fox jumps over the lazy dog. This sentence contains all letters in the English alphabet.
     Repeated to create lengthy content that will force scrollbars. Lorem ipsum dolor sit amet, consectetur 
@@ -13,9 +12,8 @@ export default function Home() {
     oxygen equipment of the same size. The public was amazed to view the quickness and dexterity of the juggler.
   `.repeat(5);
 
-  // Expanded text for boxes 5-6
   const expandedText = `
-    This is the non-scrolling content for Boxes 5 and 6 with light tan background.
+    This is the non-scrolling content for Boxes 5, 6, and 7 with light tan background.
     The text color has been optimized for readability against the tan background.
     
     Sample sections:
@@ -29,7 +27,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      {/* Box 1 (Light Tan) */}
+      {/* Box 1 (Light Tan) - Now doubled in size */}
       <div className="square top-square">
         <div className="content-title">Sample Title 1</div>
         <div className="content-body">
@@ -37,7 +35,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Box 6 (Light Tan) */}
+      {/* Box 6 (Light Green) */}
       <div className="square box-six">
         <div className="content-title">Sample Box 6</div>
         <div className="content-body">
@@ -45,7 +43,7 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Boxes 2 & 3 (Light Caramel) */}
+      {/* Boxes 2 & 3 (Light Caramel) - Box 2 is now doubled */}
       <div className="middle-squares">
         <div className="square middle-square">
           <div className="content-title">Sample 2</div>
@@ -72,6 +70,14 @@ export default function Home() {
       {/* Box 5 (Light Tan) */}
       <div className="square box-five">
         <div className="content-title">Sample Box 5</div>
+        <div className="content-body">
+          <p>{expandedText}</p>
+        </div>
+      </div>
+
+      {/* New Box 7 (Light Tan) */}
+      <div className="square box-seven">
+        <div className="content-title">Sample Box 7</div>
         <div className="content-body">
           <p>{expandedText}</p>
         </div>
