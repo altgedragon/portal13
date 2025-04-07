@@ -14,7 +14,7 @@ body {
   gap: 40px;
 }
 
-/* All boxes share these base styles */
+/* All boxes now share the same background */
 .square {
   border: 2px solid black;
   padding: 20px;
@@ -22,31 +22,36 @@ body {
   flex-direction: column;
   overflow: hidden;
   box-sizing: border-box;
+  background-color: #777777; /* Unified medium grey */
 }
 
-/* Header/Footer Boxes (light pink) */
+/* Size adjustments */
 .top-square, .bottom-square {
-  background-color: #FFB6C1;
   height: 200px;
 }
 
-/* Middle Boxes (lighter grey) */
 .middle-squares {
   display: flex;
   gap: 20px;
 }
 
 .middle-square {
-  background-color: #777777;
   width: 50%;
   height: 300px;
 }
 
-/* Box 5 & 6 (light green) - TRIPLED IN SIZE */
 .box-five, .box-six {
-  background-color: #90EE90;
   height: auto;
-  min-height: 450px; /* Tripled from original 150px */
+  min-height: 450px;
+}
+
+/* Text color customizations */
+.top-square, .bottom-square {
+  color: #FF69B4; /* Pink text for boxes 1 & 4 */
+}
+
+.box-five, .box-six {
+  color: #32CD32; /* Green text for boxes 5 & 6 */
 }
 
 /* Shared content styles */
@@ -55,27 +60,20 @@ body {
   margin-bottom: 10px;
   text-align: center;
   flex-shrink: 0;
-  font-size: 1.2em; /* Slightly larger title */
+  font-size: 1.2em;
 }
 
-/* Scrollable content (for boxes 1-4) */
+.content-body {
+  flex: 1;
+  padding: 15px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Scrollable content (boxes 1-4) */
 .top-square .content-body,
 .middle-square .content-body,
 .bottom-square .content-body {
-  flex: 1;
   overflow-y: auto;
-  padding: 5px;
-  border-top: 1px solid rgba(0,0,0,0.2);
-}
-
-/* Non-scrolling content (for boxes 5-6) */
-.box-five .content-body,
-.box-six .content-body {
-  flex: 1;
-  padding: 15px; /* Increased padding */
-  border-top: 1px solid rgba(0,0,0,0.2);
-  overflow: hidden;
-  font-size: 1.1em; /* Slightly larger text */
 }
 
 /* Scrollbar styling */
@@ -83,6 +81,6 @@ body {
   width: 8px;
 }
 .content-body::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #555;
   border-radius: 4px;
 }
