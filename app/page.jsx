@@ -13,7 +13,7 @@ export default function Home() {
     oxygen equipment of the same size. The public was amazed to view the quickness and dexterity of the juggler.
   `.repeat(5);
 
-  // Expanded text for boxes 5-6 to fill tripled size
+  // Expanded text for boxes 5-7 to fill tripled size
   const expandedText = `
     This is the non-scrolling content for the enlarged Boxes 5 and 6. 
     The container height has been tripled from its original size to provide more visible space.
@@ -48,15 +48,23 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Box 6 (Above 2 & 3) - TRIPLED SIZE */}
-      <div className="square box-five">
+      {/* Box 6 (Dark Brown) */}
+      <div className="square box-six">
         <div className="content-title">Sample Box 6</div>
         <div className="content-body">
           <p>{expandedText}</p>
         </div>
       </div>
+
+      {/* Box 7 (Dark Brown) */}
+      <div className="square box-seven">
+        <div className="content-title">Sample Box 7</div>
+        <div className="content-body">
+          <p>{expandedText}</p>
+        </div>
+      </div>
       
-      {/* Boxes 2 & 3 (Middle) */}
+      {/* Boxes 2 & 3 (Middle - Rich Green) */}
       <div className="middle-squares">
         <div className="square middle-square">
           <div className="content-title">Sample 2</div>
@@ -72,7 +80,7 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Box 4 (Bottom) */}
+      {/* Box 4 (Yellow) */}
       <div className="square bottom-square">
         <div className="content-title">Sample 4</div>
         <div className="content-body">
@@ -80,7 +88,7 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Box 5 (Existing) - TRIPLED SIZE */}
+      {/* Box 5 (Existing) */}
       <div className="square box-five">
         <div className="content-title">Sample Box 5</div>
         <div className="content-body">
