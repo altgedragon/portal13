@@ -46,14 +46,14 @@ body {
   height: 200px;
 }
 
-/* Box 6 (dark brown) */
+/* Box 6 (deep brown - updated color) */
 .box-six {
-  background-color: #4a3a29;
+  background-color: #6b4e3a;  /* Changed to deep brown */
   color: #f5e6d0;
   min-height: 450px;
 }
 
-/* Box 7 (dark brown) */
+/* Box 7 (original dark brown) */
 .box-seven {
   background-color: #4a3a29;
   color: #f5e6d0;
