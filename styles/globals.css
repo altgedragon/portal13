@@ -30,23 +30,23 @@ body {
   height: 200px;
 }
 
-/* Middle Boxes (now lighter grey) */
+/* Middle Boxes (lighter grey) */
 .middle-squares {
   display: flex;
   gap: 20px;
 }
 
 .middle-square {
-  background-color: #777777; /* Lighter grey than before */
+  background-color: #777777;
   width: 50%;
   height: 300px;
 }
 
-/* New Box 5 (light green, no scroll) */
-.box-five {
-  background-color: #90EE90; /* Light green */
-  height: auto; /* Height based on content */
-  min-height: 150px; /* Minimum height */
+/* Box 5 & 6 (light green) - TRIPLED IN SIZE */
+.box-five, .box-six {
+  background-color: #90EE90;
+  height: auto;
+  min-height: 450px; /* Tripled from original 150px */
 }
 
 /* Shared content styles */
@@ -55,6 +55,7 @@ body {
   margin-bottom: 10px;
   text-align: center;
   flex-shrink: 0;
+  font-size: 1.2em; /* Slightly larger title */
 }
 
 /* Scrollable content (for boxes 1-4) */
@@ -67,12 +68,14 @@ body {
   border-top: 1px solid rgba(0,0,0,0.2);
 }
 
-/* Non-scrolling content (for box 5) */
-.box-five .content-body {
+/* Non-scrolling content (for boxes 5-6) */
+.box-five .content-body,
+.box-six .content-body {
   flex: 1;
-  padding: 5px;
+  padding: 15px; /* Increased padding */
   border-top: 1px solid rgba(0,0,0,0.2);
   overflow: hidden;
+  font-size: 1.1em; /* Slightly larger text */
 }
 
 /* Scrollbar styling */
