@@ -24,54 +24,32 @@ body {
   box-sizing: border-box;
 }
 
-/* Box 1 (Light Tan - doubled height) */
-.top-square {
-  background-color: #f5e6d0;
-  color: #4a3a29;
-  height: 400px;
+/* Box 1 & 5 (light tan) */
+.top-square, .box-five {
+  background-color: #f5e6d0; /* Slightly lighter tan for better readability */
+  color: #4a3a29; /* Darker text for better contrast */
+  height: 200px;
 }
 
-/* Box 2 (Light Caramel - doubled height) */
-.middle-square:first-child {
-  background-color: #d9b38c;
-  color: #2a1a0a;
-  width: 50%;
-  height: 600px;
-}
-
-/* Box 3 (Light Caramel - original height) */
-.middle-square:last-child {
-  background-color: #d9b38c;
-  color: #2a1a0a;
+/* Box 2 & 3 (light caramel) */
+.middle-square {
+  background-color: #d9b38c; /* Light caramel */
+  color: #2a1a0a; /* Very dark brown text */
   width: 50%;
   height: 300px;
 }
 
-/* Box 4 (Light Red) */
+/* Box 4 (light red) */
 .bottom-square {
-  background-color: #ff9999;
-  color: #5c0000;
+  background-color: #ff9999; /* Light red */
+  color: #5c0000; /* Deep red text */
   height: 200px;
 }
 
-/* Box 5 (Light Tan) */
-.box-five {
-  background-color: #f5e6d0;
-  color: #4a3a29;
-  height: 200px;
-}
-
-/* Box 6 (Green) */
+/* Box 6 (green) */
 .box-six {
-  background-color: #99cc99;
-  color: #003300;
-  min-height: 450px;
-}
-
-/* Box 7 (Yellow) */
-.box-seven {
-  background-color: #ffff99;
-  color: #4d4d00;
+  background-color: #99cc99; /* Light green */
+  color: #003300; /* Dark green text */
   min-height: 450px;
 }
 
@@ -88,46 +66,33 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Box 1 Title */
-.top-square .content-title {
-  color: #5a4a3a;
-  font-size: 1.4em;
-  font-family: 'Georgia', serif;
+/* Tan boxes (1 & 5) titles */
+.top-square .content-title,
+.box-five .content-title {
+  color: #5a4a3a; /* Dark tan */
+  font-size: 1.4em; /* Slightly larger */
+  font-family: 'Georgia', serif; /* More elegant font */
 }
 
-/* Box 2 & 3 Titles */
+/* Caramel boxes (2 & 3) titles */
 .middle-square .content-title {
   color: #3a2511;
   font-size: 1.4em;
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Verdana', sans-serif; /* Clean sans-serif */
 }
 
-/* Box 4 Title */
+/* Red box (4) title */
 .bottom-square .content-title {
   color: #800000;
   font-size: 1.4em;
-  font-family: 'Arial Black', sans-serif;
+  font-family: 'Arial Black', sans-serif; /* Bold font */
 }
 
-/* Box 5 Title */
-.box-five .content-title {
-  color: #5a4a3a;
-  font-size: 1.4em;
-  font-family: 'Georgia', serif;
-}
-
-/* Box 6 Title */
+/* Green box (6) title */
 .box-six .content-title {
-  color: #004d00;
+  color: #004d00; /* Dark green */
   font-size: 1.4em;
-  font-family: 'Trebuchet MS', sans-serif;
-}
-
-/* Box 7 Title */
-.box-seven .content-title {
-  color: #666600;
-  font-size: 1.4em;
-  font-family: 'Courier New', monospace;
+  font-family: 'Trebuchet MS', sans-serif; /* Friendly font */
 }
 
 .content-body {
@@ -137,51 +102,39 @@ body {
   line-height: 1.5;
 }
 
-/* Scrollable content boxes */
 .top-square .content-body,
 .middle-square .content-body,
 .bottom-square .content-body {
   overflow-y: auto;
 }
 
-/* Non-scrolling content boxes */
 .box-five .content-body,
-.box-six .content-body,
-.box-seven .content-body {
+.box-six .content-body {
   overflow: hidden;
   padding: 15px;
   font-size: 1.1em;
 }
 
-/* Box 1 & 5 content */
+/* Font adjustments for content */
 .top-square .content-body,
 .box-five .content-body {
   font-family: 'Georgia', serif;
   color: #4a3a29;
 }
 
-/* Box 2 & 3 content */
 .middle-square .content-body {
   font-family: 'Verdana', sans-serif;
   color: #2a1a0a;
 }
 
-/* Box 4 content */
 .bottom-square .content-body {
   font-family: 'Arial', sans-serif;
   color: #5c0000;
 }
 
-/* Box 6 content */
 .box-six .content-body {
   font-family: 'Trebuchet MS', sans-serif;
   color: #003300;
-}
-
-/* Box 7 content */
-.box-seven .content-body {
-  font-family: 'Courier New', monospace;
-  color: #4d4d00;
 }
 
 .content-body::-webkit-scrollbar {
@@ -190,4 +143,4 @@ body {
 .content-body::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.3);
   border-radius: 4px;
-
+}
