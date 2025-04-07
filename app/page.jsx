@@ -15,8 +15,8 @@ export default function Home() {
 
   // Expanded text for boxes 5-7
   const expandedText = `
-    This is the non-scrolling content for Boxes 5, 6, and 7 with appropriate background colors.
-    The text color has been optimized for readability against each background.
+    This is the non-scrolling content for Boxes 5, 6, and 7.
+    The text color has been optimized for readability against their respective backgrounds.
     
     Sample sections:
     [1] The quick brown fox jumps over the lazy dog.
@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      {/* Box 1 (Light Tan) - now twice as tall */}
+      {/* Box 1 (Light Tan - doubled height) */}
       <div className="square top-square">
         <div className="content-title">Sample Title 1</div>
         <div className="content-body">
@@ -45,9 +45,9 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Boxes 2 & 3 (Light Caramel) - Box 2 now twice as tall */}
+      {/* Boxes 2 & 3 (Light Caramel - Box 2 doubled height) */}
       <div className="middle-squares">
-        <div className="square middle-square box-two">
+        <div className="square middle-square">
           <div className="content-title">Sample 2</div>
           <div className="content-body">
             <p>{longText}</p>
@@ -58,6 +58,14 @@ export default function Home() {
           <div className="content-body">
             <p>{longText}</p>
           </div>
+        </div>
+      </div>
+
+      {/* Box 7 (Yellow) */}
+      <div className="square box-seven">
+        <div className="content-title">Sample Box 7</div>
+        <div className="content-body">
+          <p>{expandedText}</p>
         </div>
       </div>
       
@@ -72,14 +80,6 @@ export default function Home() {
       {/* Box 5 (Light Tan) */}
       <div className="square box-five">
         <div className="content-title">Sample Box 5</div>
-        <div className="content-body">
-          <p>{expandedText}</p>
-        </div>
-      </div>
-
-      {/* New Box 7 (Light Tan) */}
-      <div className="square box-seven">
-        <div className="content-title">Sample Box 7</div>
         <div className="content-body">
           <p>{expandedText}</p>
         </div>
