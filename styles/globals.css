@@ -5,7 +5,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Added gap between all elements */
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 /* All boxes share these base styles */
@@ -14,6 +20,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -21,10 +28,9 @@ body {
 .top-square, .bottom-square {
   background-color: #FFB6C1;
   height: 200px;
-  overflow: hidden;
 }
 
-/* Middle Boxes (lighter grey) */
+/* Middle Boxes (now lighter grey) */
 .middle-squares {
   display: flex;
   gap: 20px;
@@ -34,15 +40,13 @@ body {
   background-color: #777777; /* Lighter grey than before */
   width: 50%;
   height: 300px;
-  overflow: hidden;
 }
 
-/* New Box 5 (light green) */
+/* New Box 5 (light green, no scroll) */
 .box-five {
   background-color: #90EE90; /* Light green */
-  height: auto; /* Auto height for content */
+  height: auto; /* Height based on content */
   min-height: 150px; /* Minimum height */
-  overflow: visible; /* No scrolling */
 }
 
 /* Shared content styles */
@@ -53,23 +57,29 @@ body {
   flex-shrink: 0;
 }
 
-.scroll-content {
+/* Scrollable content (for boxes 1-4) */
+.top-square .content-body,
+.middle-square .content-body,
+.bottom-square .content-body {
   flex: 1;
   overflow-y: auto;
   padding: 5px;
   border-top: 1px solid rgba(0,0,0,0.2);
 }
 
-.full-content {
+/* Non-scrolling content (for box 5) */
+.box-five .content-body {
+  flex: 1;
   padding: 5px;
   border-top: 1px solid rgba(0,0,0,0.2);
+  overflow: hidden;
 }
 
 /* Scrollbar styling */
-.scroll-content::-webkit-scrollbar {
+.content-body::-webkit-scrollbar {
   width: 8px;
 }
-.scroll-content::-webkit-scrollbar-thumb {
+.content-body::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 4px;
 }
