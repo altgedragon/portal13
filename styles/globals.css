@@ -11,32 +11,47 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Increased space between sections */
+  gap: 40px;
 }
 
 .square {
   border: 2px solid black;
   background-color: white;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Contains the scrollable content */
+}
+
+.square-header {
   text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.scroll-content {
+  flex: 1;
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 5px;
+  border-top: 1px solid #ddd;
 }
 
 .top-square {
-  height: 100px;
+  height: 200px; /* Increased height */
 }
 
 .middle-squares {
   display: flex;
   gap: 20px;
-  flex: 1; /* This makes the middle section expand */
+  flex: 1;
 }
 
 .middle-square {
   flex: 1;
-  min-height: 200px; /* Minimum height */
+  min-height: 300px;
 }
 
 .bottom-square {
-  height: 100px;
-  margin-top: auto; /* Pushes it to bottom with same spacing as top */
+  height: 200px; /* Increased height */
+  margin-top: auto;
 }
