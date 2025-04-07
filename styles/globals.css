@@ -5,7 +5,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Increased space between sections */
 }
 
 .square {
@@ -15,17 +21,22 @@ body {
   text-align: center;
 }
 
-.top-square, .bottom-square {
+.top-square {
   height: 100px;
 }
 
 .middle-squares {
   display: flex;
   gap: 20px;
-  flex-grow: 1;
+  flex: 1; /* This makes the middle section expand */
 }
 
 .middle-square {
   flex: 1;
-  height: 300px;
+  min-height: 200px; /* Minimum height */
+}
+
+.bottom-square {
+  height: 100px;
+  margin-top: auto; /* Pushes it to bottom with same spacing as top */
 }
