@@ -14,54 +14,54 @@ body {
   gap: 40px;
 }
 
+/* All boxes share these base styles */
 .square {
   border: 2px solid black;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: hidden; /* Contain everything within borders */
+  box-sizing: border-box; /* Include padding in height calculations */
 }
 
+/* Header/Footer Boxes (light pink) */
 .top-square, .bottom-square {
   background-color: #FFB6C1;
-  height: 200px;
+  height: 200px; /* Fixed height */
 }
 
+/* Middle Boxes (medium grey) */
 .middle-squares {
   display: flex;
   gap: 20px;
-  flex: 1;
 }
 
 .middle-square {
   background-color: #555555;
-  flex: 1;
-  min-height: 300px;
+  width: 50%; /* Equal width for both middle boxes */
+  height: 300px; /* Fixed height (same as before) */
 }
 
+/* Content styles */
 .content-title {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevent title from shrinking */
 }
 
 .content-body {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: auto; /* Enable vertical scrolling */
   padding: 5px;
   border-top: 1px solid rgba(0,0,0,0.2);
-  scrollbar-width: thin;
 }
 
-/* Custom scrollbar for better visibility */
+/* Custom scrollbar styling */
 .content-body::-webkit-scrollbar {
   width: 8px;
 }
 .content-body::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 4px;
-}
-.content-body::-webkit-scrollbar-thumb:hover {
-  background: #666;
 }
