@@ -13,8 +13,30 @@ export default function Home() {
     oxygen equipment of the same size. The public was amazed to view the quickness and dexterity of the juggler.
   `.repeat(5);
 
-  // Short text for boxes 5-6
-  const shortText = `This is the non-scrolling sample text for Boxes 5 and 6. All content is visible at once.`;
+  // Expanded text for boxes 5-6 to fill tripled size
+  const expandedText = `
+    This is the non-scrolling content for the enlarged Boxes 5 and 6. 
+    The container height has been tripled from its original size to provide more visible space.
+    Sample content is repeated here to fill the expanded container:
+    
+    [Section 1]
+    The quick brown fox jumps over the lazy dog. This classic pangram contains all letters of the English alphabet.
+    
+    [Section 2]
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.
+    
+    [Section 3]
+    The five boxing wizards jump quickly. This sentence is another example of a perfect pangram.
+    
+    [Section 4]
+    How vexingly quick daft zebras jump! A fun twist on the classic pangram format.
+    
+    [Section 5]
+    Bright vixens jump; dozy fowl quack. This version includes both punctuation and capitalization.
+    
+    [Section 6]
+    Jackdaws love my big sphinx of quartz. A more poetic take on the traditional pangram.
+  `.repeat(2);
 
   return (
     <div className="container">
@@ -26,11 +48,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* New Box 6 (Above 2 & 3) */}
+      {/* Box 6 (Above 2 & 3) - TRIPLED SIZE */}
       <div className="square box-five">
         <div className="content-title">Sample Box 6</div>
         <div className="content-body">
-          <p>{shortText}</p>
+          <p>{expandedText}</p>
         </div>
       </div>
       
@@ -58,11 +80,11 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Box 5 (Existing) */}
+      {/* Box 5 (Existing) - TRIPLED SIZE */}
       <div className="square box-five">
         <div className="content-title">Sample Box 5</div>
         <div className="content-body">
-          <p>{shortText}</p>
+          <p>{expandedText}</p>
         </div>
       </div>
     </div>
