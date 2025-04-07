@@ -55,14 +55,6 @@ export default function Home() {
           <p>{expandedText}</p>
         </div>
       </div>
-
-      {/* Box 7 (Dark Brown) */}
-      <div className="square box-seven">
-        <div className="content-title">Sample Box 7</div>
-        <div className="content-body">
-          <p>{expandedText}</p>
-        </div>
-      </div>
       
       {/* Boxes 2 & 3 (Middle - Rich Green) */}
       <div className="middle-squares">
