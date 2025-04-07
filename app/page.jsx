@@ -1,21 +1,16 @@
 export default function Home() {
-  const sampleText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
-  Duis aute irure dolor in reprehenderit in voluptate velit esse. 
-  Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat. 
-  Cupidatat non proident, sunt in culpa qui officia deserunt mollit. 
-  Anim id est laborum. `.repeat(10); // Repeated to ensure scrollable content
+  const sampleText = `Lorem ipsum dolor sit amet...`.repeat(3); 
+  // Reduced text since we're not scrolling
 
   return (
     <div className="container">
-      {/* Top Box */}
+      {/* Top Box (pink) */}
       <div className="square top-square">
         <div className="content-title">Sample Title 1</div>
         <div className="content-body">{sampleText}</div>
       </div>
       
-      {/* Middle Boxes */}
+      {/* Middle Boxes (medium-dark grey) */}
       <div className="middle-squares">
         <div className="square middle-square">
           <div className="content-title">Sample 2</div>
@@ -27,7 +22,7 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Bottom Box */}
+      {/* Bottom Box (pink) */}
       <div className="square bottom-square">
         <div className="content-title">Sample 4</div>
         <div className="content-body">{sampleText}</div>
