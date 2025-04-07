@@ -1,6 +1,5 @@
 export default function Home() {
-  const sampleText = `Lorem ipsum dolor sit amet...`.repeat(3); 
-  // Reduced text since we're not scrolling
+  const sampleText = `Lorem ipsum dolor sit amet...`.repeat(10);
 
   return (
     <div className="container">
