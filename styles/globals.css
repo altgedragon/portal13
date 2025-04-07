@@ -46,16 +46,9 @@ body {
   height: 200px;
 }
 
-/* Box 6 (deep brown - updated color) */
+/* Box 6 (deep brown) */
 .box-six {
-  background-color: #6b4e3a;  /* Changed to deep brown */
-  color: #f5e6d0;
-  min-height: 450px;
-}
-
-/* Box 7 (original dark brown) */
-.box-seven {
-  background-color: #4a3a29;
+  background-color: #6b4e3a;
   color: #f5e6d0;
   min-height: 450px;
 }
@@ -116,8 +109,7 @@ body {
 }
 
 .box-five .content-body,
-.box-six .content-body,
-.box-seven .content-body {
+.box-six .content-body {
   overflow: hidden;
   padding: 15px;
   font-size: 1.1em;
@@ -140,8 +132,7 @@ body {
   color: #5c0000;
 }
 
-.box-six .content-body,
-.box-seven .content-body {
+.box-six .content-body {
   font-family: 'Trebuchet MS', sans-serif;
   color: #f5e6d0;
 }
