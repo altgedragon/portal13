@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Box 6 (Deep Brown) */}
+      {/* Box 6 (Now same size as Box 1/5 were) */}
       <div className="square box-six">
         <div className="content-title">Sample Box 6</div>
         <div className="content-body">
@@ -80,7 +80,7 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Box 5 (Existing) */}
+      {/* Box 5 (Now half original size) */}
       <div className="square box-five">
         <div className="content-title">Sample Box 5</div>
         <div className="content-body">
