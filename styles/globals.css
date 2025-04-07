@@ -102,13 +102,6 @@ body {
   font-family: 'Trebuchet MS', sans-serif;
 }
 
-/* Box 7 title */
-.box-seven .content-title {
-  color: #d9b38c;
-  font-size: 1.4em;
-  font-family: 'Trebuchet MS', sans-serif;
-}
-
 .content-body {
   flex: 1;
   padding: 5px;
