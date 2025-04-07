@@ -14,16 +14,16 @@ body {
   gap: 40px;
 }
 
-/* All boxes share these base styles */
+/* All boxes will have these base styles */
 .square {
   border: 2px solid black;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Disables scrolling for all boxes */
+  overflow: hidden; /* Contains scrollbar INSIDE border */
 }
 
-/* Top/Bottom Boxes (light pink) */
+/* Top & Bottom Boxes (light pink) */
 .top-square, .bottom-square {
   background-color: #FFB6C1;
   height: 200px;
@@ -37,21 +37,23 @@ body {
 }
 
 .middle-square {
-  background-color: #888888; /* Medium-dark grey */
+  background-color: #555555; /* Darker than boxes 1/4, lighter than site bg */
   flex: 1;
   min-height: 300px;
 }
 
-/* Content styles (same for all boxes) */
+/* Scrollable content for ALL boxes */
 .content-title {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
+  flex-shrink: 0; /* Prevents title from shrinking */
 }
 
 .content-body {
   flex: 1;
+  overflow-y: auto; /* Scrollable content */
   padding: 5px;
-  border-top: 1px solid #ddd;
-  overflow: hidden; /* Ensures no scrolling */
+  border-top: 1px solid rgba(0,0,0,0.2); /* Subtle divider */
+  scrollbar-width: thin; /* Cleaner scrollbar */
 }
