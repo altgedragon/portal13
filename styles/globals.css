@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif; /* Base font for better readability */
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -15,7 +15,6 @@ body {
   gap: 40px;
 }
 
-/* All boxes share these base styles */
 .square {
   border: 2px solid black;
   padding: 20px;
@@ -27,14 +26,14 @@ body {
 
 /* Box 1 & 5 (light tan) */
 .top-square, .box-five {
-  background-color: #E6D5B8; /* Light tan */
-  color: #333333; /* Dark text for contrast */
+  background-color: #F5E8C7; /* Light tan */
+  color: #3A3226; /* Dark text for contrast */
   height: 200px;
 }
 
 /* Box 2 & 3 (light caramel) */
 .middle-square {
-  background-color: #D4A373; /* Light caramel */
+  background-color: #D9B38C; /* Light caramel */
   color: #2C1608; /* Very dark brown text */
   width: 50%;
   height: 300px;
@@ -42,77 +41,78 @@ body {
 
 /* Box 4 (light red) */
 .bottom-square {
-  background-color: #FF7F7F; /* Light red */
+  background-color: #FF9999; /* Light red */
   color: #5C0000; /* Deep red text */
   height: 200px;
 }
 
-/* Box 6 (matches Box 5 style) */
+/* Box 6 (green) */
 .box-six {
-  background-color: #E6D5B8; /* Light tan */
-  color: #333333; /* Dark text */
+  background-color: #99CC99; /* Light green */
+  color: #003300; /* Dark green text */
   min-height: 450px;
 }
 
-/* Middle boxes container */
 .middle-squares {
   display: flex;
   gap: 20px;
 }
 
-/* Title styles - customized per box */
 .content-title {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
   flex-shrink: 0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Improves readability */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  font-size: 1.4em; /* Slightly larger for better visibility */
 }
 
 /* Tan boxes (1 & 5) titles */
 .top-square .content-title,
-.box-five .content-title,
-.box-six .content-title {
-  color: #5C4033; /* Rich brown */
-  font-size: 1.3em;
+.box-five .content-title {
+  color: #5C4033;
+  font-size: 1.4em;
 }
 
 /* Caramel boxes (2 & 3) titles */
 .middle-square .content-title {
-  color: #3A2511; /* Dark caramel */
-  font-size: 1.3em;
+  color: #3A2511;
+  font-size: 1.4em;
 }
 
 /* Red box (4) title */
 .bottom-square .content-title {
-  color: #800000; /* Maroon */
-  font-size: 1.3em;
+  color: #800000;
+  font-size: 1.4em;
 }
 
-/* Content body styles */
+/* Green box (6) title */
+.box-six .content-title {
+  color: #003300;
+  font-size: 1.4em;
+}
+
 .content-body {
   flex: 1;
   padding: 5px;
   border-top: 1px solid rgba(0,0,0,0.2);
-  line-height: 1.5; /* Better readability */
+  line-height: 1.5;
+  font-size: 1.1em; /* Slightly larger font for better readability */
 }
 
-/* Scrollable content */
 .top-square .content-body,
 .middle-square .content-body,
 .bottom-square .content-body {
   overflow-y: auto;
 }
 
-/* Non-scrolling content */
 .box-five .content-body,
 .box-six .content-body {
   overflow: hidden;
   padding: 15px;
-  font-size: 1.1em;
+  font-size: 1.15em; /* Slightly larger for non-scrolling boxes */
 }
 
-/* Scrollbar styling */
 .content-body::-webkit-scrollbar {
   width: 8px;
 }
