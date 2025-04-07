@@ -6,41 +6,22 @@ export default function Home() {
     adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt. The five boxing wizards jump quickly. 
     Pack my box with five dozen liquor jugs. How vexingly quick daft zebras jump! Bright vixens jump; 
     dozy fowl quack. Jackdaws love my big sphinx of quartz. The jay, pig, fox, zebra and my wolves quack!
-    Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard's job is 
-    to vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game. Woven silk pyjamas 
-    exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him. The quick onyx goblin jumps 
-    over the lazy dwarf. All questions asked by five watched experts amaze the judge. Back in June we delivered 
-    oxygen equipment of the same size. The public was amazed to view the quickness and dexterity of the juggler.
   `.repeat(5);
 
-  // Expanded text for boxes 5-6 to fill tripled size
-  const expandedText = `
-    This is the non-scrolling content for the enlarged Boxes 5 and 6. 
-    The container height has been tripled from its original size to provide more visible space.
-    Sample content is repeated here to fill the expanded container:
+  // Text for boxes 5-6
+  const boxFiveSixText = `
+    This is the content for Boxes 5 and 6 with green text. The background is now the same medium grey
+    as all other boxes, but the text color distinguishes these boxes. The container is significantly
+    larger than standard boxes but maintains the same styling principles.
     
-    [Section 1]
-    The quick brown fox jumps over the lazy dog. This classic pangram contains all letters of the English alphabet.
-    
-    [Section 2]
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.
-    
-    [Section 3]
-    The five boxing wizards jump quickly. This sentence is another example of a perfect pangram.
-    
-    [Section 4]
-    How vexingly quick daft zebras jump! A fun twist on the classic pangram format.
-    
-    [Section 5]
-    Bright vixens jump; dozy fowl quack. This version includes both punctuation and capitalization.
-    
-    [Section 6]
-    Jackdaws love my big sphinx of quartz. A more poetic take on the traditional pangram.
+    [Section 1] Demonstration of colored text on unified background
+    [Section 2] All boxes share the #777777 background color
+    [Section 3] Only text colors differentiate certain boxes
   `.repeat(2);
 
   return (
     <div className="container">
-      {/* Box 1 (Top) */}
+      {/* Box 1 (Top) - Pink text */}
       <div className="square top-square">
         <div className="content-title">Sample Title 1</div>
         <div className="content-body">
@@ -48,15 +29,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Box 6 (Above 2 & 3) - TRIPLED SIZE */}
-      <div className="square box-five">
+      {/* Box 6 - Green text */}
+      <div className="square box-six">
         <div className="content-title">Sample Box 6</div>
         <div className="content-body">
-          <p>{expandedText}</p>
+          <p>{boxFiveSixText}</p>
         </div>
       </div>
       
-      {/* Boxes 2 & 3 (Middle) */}
+      {/* Boxes 2 & 3 (Middle) - Default text */}
       <div className="middle-squares">
         <div className="square middle-square">
           <div className="content-title">Sample 2</div>
@@ -72,7 +53,7 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Box 4 (Bottom) */}
+      {/* Box 4 (Bottom) - Pink text */}
       <div className="square bottom-square">
         <div className="content-title">Sample 4</div>
         <div className="content-body">
@@ -80,11 +61,11 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Box 5 (Existing) - TRIPLED SIZE */}
+      {/* Box 5 - Green text */}
       <div className="square box-five">
         <div className="content-title">Sample Box 5</div>
         <div className="content-body">
-          <p>{expandedText}</p>
+          <p>{boxFiveSixText}</p>
         </div>
       </div>
     </div>
