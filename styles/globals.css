@@ -1,34 +1,168 @@
-/* Updated styles for larger Box 1 and Box 2 */
+body {
+  background-color: #333333;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.square {
+  border: 2px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Box 1 (light tan) - now twice as tall */
 .top-square {
   background-color: #f5e6d0;
   color: #4a3a29;
-  height: 400px; /* Doubled from 200px */
+  height: 400px; /* Changed from 200px to 400px */
 }
 
-/* Make first middle-square (Sample 2) taller */
-.middle-squares .middle-square:first-child {
-  height: 600px; /* Doubled from 300px */
+/* Box 2 (light caramel) - now twice as tall */
+.middle-square.box-two {
+  background-color: #d9b38c;
+  color: #2a1a0a;
+  width: 50%;
+  height: 600px; /* Changed from 300px to 600px */
 }
 
-/* New Box 7 style - matches Box 5/1/6 */
-.box-seven {
-  background-color: #f5e6d0; /* Light tan like Box 1/5 */
+/* Box 3 (light caramel) - remains original size */
+.middle-square:not(.box-two) {
+  background-color: #d9b38c;
+  color: #2a1a0a;
+  width: 50%;
+  height: 300px;
+}
+
+/* Box 4 (light red) */
+.bottom-square {
+  background-color: #ff9999;
+  color: #5c0000;
+  height: 200px;
+}
+
+/* Box 5 (light tan) */
+.box-five {
+  background-color: #f5e6d0;
   color: #4a3a29;
-  min-height: 450px; /* Same as Box 6 */
+  height: 200px;
 }
 
-/* Box 7 title */
+/* Box 6 (green) */
+.box-six {
+  background-color: #99cc99;
+  color: #003300;
+  min-height: 450px;
+}
+
+/* Box 7 (new box - light tan like 1 & 5) */
+.box-seven {
+  background-color: #f5e6d0;
+  color: #4a3a29;
+  min-height: 450px; /* Similar to box 6 */
+}
+
+.middle-squares {
+  display: flex;
+  gap: 20px;
+}
+
+.content-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  flex-shrink: 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Title styles */
+.top-square .content-title,
+.box-five .content-title,
 .box-seven .content-title {
   color: #5a4a3a;
   font-size: 1.4em;
   font-family: 'Georgia', serif;
 }
 
-/* Box 7 content */
+.middle-square .content-title {
+  color: #3a2511;
+  font-size: 1.4em;
+  font-family: 'Verdana', sans-serif;
+}
+
+.bottom-square .content-title {
+  color: #800000;
+  font-size: 1.4em;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.box-six .content-title {
+  color: #004d00;
+  font-size: 1.4em;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.content-body {
+  flex: 1;
+  padding: 5px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  line-height: 1.5;
+}
+
+.top-square .content-body,
+.middle-square .content-body,
+.bottom-square .content-body {
+  overflow-y: auto;
+}
+
+.box-five .content-body,
+.box-six .content-body,
 .box-seven .content-body {
   overflow: hidden;
   padding: 15px;
   font-size: 1.1em;
+}
+
+/* Font adjustments */
+.top-square .content-body,
+.box-five .content-body,
+.box-seven .content-body {
   font-family: 'Georgia', serif;
   color: #4a3a29;
+}
+
+.middle-square .content-body {
+  font-family: 'Verdana', sans-serif;
+  color: #2a1a0a;
+}
+
+.bottom-square .content-body {
+  font-family: 'Arial', sans-serif;
+  color: #5c0000;
+}
+
+.box-six .content-body {
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #003300;
+}
+
+.content-body::-webkit-scrollbar {
+  width: 8px;
+}
+.content-body::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
 }
