@@ -1,4 +1,5 @@
 export default function Home() {
+  // Long text for boxes 1-4
   const longText = `
     The quick brown fox jumps over the lazy dog. This sentence contains all letters in the English alphabet.
     Repeated to create lengthy content that will force scrollbars. Lorem ipsum dolor sit amet, consectetur 
@@ -12,9 +13,10 @@ export default function Home() {
     oxygen equipment of the same size. The public was amazed to view the quickness and dexterity of the juggler.
   `.repeat(5);
 
+  // Expanded text for boxes 5-7
   const expandedText = `
-    This is the non-scrolling content for Boxes 5, 6, and 7 with light tan background.
-    The text color has been optimized for readability against the tan background.
+    This is the non-scrolling content for Boxes 5, 6, and 7 with appropriate background colors.
+    The text color has been optimized for readability against each background.
     
     Sample sections:
     [1] The quick brown fox jumps over the lazy dog.
@@ -27,7 +29,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      {/* Box 1 (Light Tan) - Now doubled in size */}
+      {/* Box 1 (Light Tan) - now twice as tall */}
       <div className="square top-square">
         <div className="content-title">Sample Title 1</div>
         <div className="content-body">
@@ -35,7 +37,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Box 6 (Light Green) */}
+      {/* Box 6 (Green) */}
       <div className="square box-six">
         <div className="content-title">Sample Box 6</div>
         <div className="content-body">
@@ -43,9 +45,9 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Boxes 2 & 3 (Light Caramel) - Box 2 is now doubled */}
+      {/* Boxes 2 & 3 (Light Caramel) - Box 2 now twice as tall */}
       <div className="middle-squares">
-        <div className="square middle-square">
+        <div className="square middle-square box-two">
           <div className="content-title">Sample 2</div>
           <div className="content-body">
             <p>{longText}</p>
