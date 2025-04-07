@@ -5,6 +5,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: Arial, sans-serif; /* Base font for better readability */
 }
 
 .container {
@@ -14,7 +15,7 @@ body {
   gap: 40px;
 }
 
-/* All boxes now share the same background */
+/* All boxes share these base styles */
 .square {
   border: 2px solid black;
   padding: 20px;
@@ -22,58 +23,93 @@ body {
   flex-direction: column;
   overflow: hidden;
   box-sizing: border-box;
-  background-color: #777777; /* Unified medium grey */
 }
 
-/* Size adjustments */
-.top-square, .bottom-square {
+/* Box 1 & 5 (light tan) */
+.top-square, .box-five {
+  background-color: #E6D5B8; /* Light tan */
+  color: #333333; /* Dark text for contrast */
   height: 200px;
 }
 
+/* Box 2 & 3 (light caramel) */
+.middle-square {
+  background-color: #D4A373; /* Light caramel */
+  color: #2C1608; /* Very dark brown text */
+  width: 50%;
+  height: 300px;
+}
+
+/* Box 4 (light red) */
+.bottom-square {
+  background-color: #FF7F7F; /* Light red */
+  color: #5C0000; /* Deep red text */
+  height: 200px;
+}
+
+/* Box 6 (matches Box 5 style) */
+.box-six {
+  background-color: #E6D5B8; /* Light tan */
+  color: #333333; /* Dark text */
+  min-height: 450px;
+}
+
+/* Middle boxes container */
 .middle-squares {
   display: flex;
   gap: 20px;
 }
 
-.middle-square {
-  width: 50%;
-  height: 300px;
-}
-
-.box-five, .box-six {
-  height: auto;
-  min-height: 450px;
-}
-
-/* Text color customizations */
-.top-square, .bottom-square {
-  color: #FF69B4; /* Pink text for boxes 1 & 4 */
-}
-
-.box-five, .box-six {
-  color: #32CD32; /* Green text for boxes 5 & 6 */
-}
-
-/* Shared content styles */
+/* Title styles - customized per box */
 .content-title {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
   flex-shrink: 0;
-  font-size: 1.2em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Improves readability */
 }
 
+/* Tan boxes (1 & 5) titles */
+.top-square .content-title,
+.box-five .content-title,
+.box-six .content-title {
+  color: #5C4033; /* Rich brown */
+  font-size: 1.3em;
+}
+
+/* Caramel boxes (2 & 3) titles */
+.middle-square .content-title {
+  color: #3A2511; /* Dark caramel */
+  font-size: 1.3em;
+}
+
+/* Red box (4) title */
+.bottom-square .content-title {
+  color: #800000; /* Maroon */
+  font-size: 1.3em;
+}
+
+/* Content body styles */
 .content-body {
   flex: 1;
-  padding: 15px;
+  padding: 5px;
   border-top: 1px solid rgba(0,0,0,0.2);
+  line-height: 1.5; /* Better readability */
 }
 
-/* Scrollable content (boxes 1-4) */
+/* Scrollable content */
 .top-square .content-body,
 .middle-square .content-body,
 .bottom-square .content-body {
   overflow-y: auto;
+}
+
+/* Non-scrolling content */
+.box-five .content-body,
+.box-six .content-body {
+  overflow: hidden;
+  padding: 15px;
+  font-size: 1.1em;
 }
 
 /* Scrollbar styling */
@@ -81,6 +117,6 @@ body {
   width: 8px;
 }
 .content-body::-webkit-scrollbar-thumb {
-  background: #555;
+  background: rgba(0,0,0,0.3);
   border-radius: 4px;
 }
