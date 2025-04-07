@@ -24,55 +24,55 @@ body {
   box-sizing: border-box;
 }
 
-/* Box 1 (light tan) - now twice as tall */
+/* Box 1 (Light Tan - doubled height) */
 .top-square {
   background-color: #f5e6d0;
   color: #4a3a29;
-  height: 400px; /* Changed from 200px to 400px */
+  height: 400px;
 }
 
-/* Box 2 (light caramel) - now twice as tall */
-.middle-square.box-two {
+/* Box 2 (Light Caramel - doubled height) */
+.middle-square:first-child {
   background-color: #d9b38c;
   color: #2a1a0a;
   width: 50%;
-  height: 600px; /* Changed from 300px to 600px */
+  height: 600px;
 }
 
-/* Box 3 (light caramel) - remains original size */
-.middle-square:not(.box-two) {
+/* Box 3 (Light Caramel - original height) */
+.middle-square:last-child {
   background-color: #d9b38c;
   color: #2a1a0a;
   width: 50%;
   height: 300px;
 }
 
-/* Box 4 (light red) */
+/* Box 4 (Light Red) */
 .bottom-square {
   background-color: #ff9999;
   color: #5c0000;
   height: 200px;
 }
 
-/* Box 5 (light tan) */
+/* Box 5 (Light Tan) */
 .box-five {
   background-color: #f5e6d0;
   color: #4a3a29;
   height: 200px;
 }
 
-/* Box 6 (green) */
+/* Box 6 (Green) */
 .box-six {
   background-color: #99cc99;
   color: #003300;
   min-height: 450px;
 }
 
-/* Box 7 (new box - light tan like 1 & 5) */
+/* Box 7 (Yellow) */
 .box-seven {
-  background-color: #f5e6d0;
-  color: #4a3a29;
-  min-height: 450px; /* Similar to box 6 */
+  background-color: #ffff99;
+  color: #4d4d00;
+  min-height: 450px;
 }
 
 .middle-squares {
@@ -88,31 +88,46 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Title styles */
-.top-square .content-title,
-.box-five .content-title,
-.box-seven .content-title {
+/* Box 1 Title */
+.top-square .content-title {
   color: #5a4a3a;
   font-size: 1.4em;
   font-family: 'Georgia', serif;
 }
 
+/* Box 2 & 3 Titles */
 .middle-square .content-title {
   color: #3a2511;
   font-size: 1.4em;
   font-family: 'Verdana', sans-serif;
 }
 
+/* Box 4 Title */
 .bottom-square .content-title {
   color: #800000;
   font-size: 1.4em;
   font-family: 'Arial Black', sans-serif;
 }
 
+/* Box 5 Title */
+.box-five .content-title {
+  color: #5a4a3a;
+  font-size: 1.4em;
+  font-family: 'Georgia', serif;
+}
+
+/* Box 6 Title */
 .box-six .content-title {
   color: #004d00;
   font-size: 1.4em;
   font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Box 7 Title */
+.box-seven .content-title {
+  color: #666600;
+  font-size: 1.4em;
+  font-family: 'Courier New', monospace;
 }
 
 .content-body {
@@ -122,12 +137,14 @@ body {
   line-height: 1.5;
 }
 
+/* Scrollable content boxes */
 .top-square .content-body,
 .middle-square .content-body,
 .bottom-square .content-body {
   overflow-y: auto;
 }
 
+/* Non-scrolling content boxes */
 .box-five .content-body,
 .box-six .content-body,
 .box-seven .content-body {
@@ -136,27 +153,35 @@ body {
   font-size: 1.1em;
 }
 
-/* Font adjustments */
+/* Box 1 & 5 content */
 .top-square .content-body,
-.box-five .content-body,
-.box-seven .content-body {
+.box-five .content-body {
   font-family: 'Georgia', serif;
   color: #4a3a29;
 }
 
+/* Box 2 & 3 content */
 .middle-square .content-body {
   font-family: 'Verdana', sans-serif;
   color: #2a1a0a;
 }
 
+/* Box 4 content */
 .bottom-square .content-body {
   font-family: 'Arial', sans-serif;
   color: #5c0000;
 }
 
+/* Box 6 content */
 .box-six .content-body {
   font-family: 'Trebuchet MS', sans-serif;
   color: #003300;
+}
+
+/* Box 7 content */
+.box-seven .content-body {
+  font-family: 'Courier New', monospace;
+  color: #4d4d00;
 }
 
 .content-body::-webkit-scrollbar {
@@ -165,4 +190,4 @@ body {
 .content-body::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.3);
   border-radius: 4px;
-}
+
